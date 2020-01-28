@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+
+    .row.content {height: 550px}
+    
+   
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+         
+    
+    @media screen and (max-width: 767px) {
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+
+<div class="container-fluid">
+  <table style="width: 100%;" >
+    <tr>
+      <td style="width: 16%;">
+        <div class="row content">
+          <div >
+          <div style="color:darkred">
+            <h1>Hello {{uname}}</h1>
+          </div>
+            <ul class="nav nav-pills nav-stacked">
+      
+           <td> <h4>  <li><a href="/Dashboard/Userinfo">Applicant Details</a></li></h4></td><br>
+           <td> <h4>  <li><a href="/Dashboard/PasswordHistory">Password History</a></li></h4></td><br>
+          
+           <td>  <h4>   <li><a href="/Dashboard/TestList">Test And Rate Drive</a></li></h4></td><br>
+            <td> <h4>   <li><a href="/SignIn">Sign Out</a></li></h4></td>
+            </ul><br>
+          </div>
+        </div>   
+      </td>
+      <td>	
+        <router-outlet></router-outlet>
+      </td>
+    </tr>
+  </table>
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+</div> 

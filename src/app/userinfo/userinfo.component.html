@@ -1,0 +1,40 @@
+
+ 
+<div class="table-responsive">
+  <h2><a  routerLink="/Dashboard">Back</a></h2> 
+  <table class="table table-hover" border="1">
+   
+      <tr>
+        <th>Name</th>
+        <th>EmailId</th>
+        <th>MobileNo</th>
+        <th>DOB</th>
+        <th>LicenseId</th>
+        <th>AadharNo</th>
+        <th>DateOfReg</th>
+        <th>Gender</th>
+        <th>AssignAppoint</th>
+      </tr>
+  
+ 
+      <tr *ngFor="let u of users">
+        <!-- <td style="background-color: aqua">{{u.UserId}}</td> -->
+        <td>{{ u.Name}}</td>
+        <td>{{ u.EmailId  }}</td>
+        <td>{{ u.MobileNo }}</td>
+        <td>{{ u.ApplicantDetails[0].DOB}}</td>
+        <td>{{ u.ApplicantDetails[0].LicenseId}}</td>
+        <td>{{ u.ApplicantDetails[0].AdharcardNo}}</td>
+        <td>{{ u.ApplicantDetails[0].DateOfReg}}</td>
+        <td>{{ u.ApplicantDetails[0].Gender}}</td>
+       
+       
+
+        <td>  
+        <button  *ngIf="!flag" type="button" class="btn btn-primary" (click)="CallAppointMent(u.UserId)">AssignAppoint</button>
+
+      </tr>
+  
+  </table>
+</div>
+

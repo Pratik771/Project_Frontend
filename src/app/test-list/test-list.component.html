@@ -1,0 +1,43 @@
+
+<div class="table-responsive" >
+  <table class="table table-hover" border='1'>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>EmailId</th>
+        <th>MobileNo</th>
+        <th>LicenseId</th>
+        <th>AadharNo</th>
+        <th>Status</th>
+        <th>Generate License</th>
+        <th>Give Status</th>
+      
+      </tr>
+    </thead>
+    <tbody>
+ 
+      <tr *ngFor="let u of testers">
+        <!-- <td style="background-color: aqua">{{u.UserId}}</td> -->
+        <td > {{ u.Name}}</td>
+        <td >{{ u.EmailId  }}</td>
+        <td  >{{ u.MobileNo }}</td>
+        <td >{{ u.ApplicantDetails[0].LicenseId}}</td>
+        <td >{{ u.ApplicantDetails[0].AdharcardNo}}</td>
+          <td>{{u.Appointments[0].Status}}</td>
+    
+    <!-- <td>{{u.GenerateLicenses[0].GeneratedOn}}</td> -->
+        <td *ngIf="u.Appointments[0].Status !='Success'">
+          <button type="button" class="btn btn-primary" (click)="Result(u.UserId)">Status</button>
+        </td>
+
+    
+         <td>
+      
+      <button type="button" class="btn btn-primary" (click)="GenerateLicense(u.UserId,u.ApplicantDetails[0].LicenseId,u.ApplicantDetails[0].AdharcardNo)">Generate License</button>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+

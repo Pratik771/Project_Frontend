@@ -1,0 +1,77 @@
+
+
+
+
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form #myForm="ngForm" (ngSubmit)="AddMyinfo(myForm)">
+  <a  routerLink="/UserDash">back</a>
+  <br>
+  <legend>Update Profile</legend>
+
+  <!-- <div class="form-group">
+    <label for="UserId">UserId</label>
+    <input ngModel type="text" class="form-control" id="UserId" name="UserId">
+</div> -->
+<div class="form-group">
+  <label for="UserId">UserId</label>
+
+  <input   type="number" class="form-control" name="UserId" [(ngModel)]="User" readonly >
+</div>
+  <!-- <div class="form-group">
+      <label for="LicenseId">LicenseId</label>
+      <input ngModel type="number" class="form-control" id="LicenseId" name="LicenseId" required maxlength="10">
+  </div> -->
+  <div class="form-group">
+    <label for="LicenseId">LicenseId</label>
+    <input ngModel type="text" class="form-control" required pattern="[0-9]{10}"  maxlength="10"  id="LicenseId" name="LicenseId" #LicenseId="ngModel">
+    <div *ngIf="LicenseId.invalid && (LicenseId.dirty || LicenseId.touched || LicenseId.pristine)" class="alert alert-danger">
+      <div *ngIf="LicenseId.errors.required">
+        LicenseId is required.
+      </div>
+      <div *ngIf="LicenseId.errors.pattern">
+          Allowed 10 digit number only
+      </div>
+  </div>  
+  </div>
+
+  <div class="form-group">
+      <label for="Gender">Gender</label><br>
+      
+      
+      <input  ngModel type="radio" name="gender" value="male"> Male<br>
+      <input  ngModel type="radio" name="gender" value="female"> Female<br>
+      <input  ngModel type="radio" name="gender" value="other"> Other
+  </div>
+
+  <div class="form-group">
+      <label for="DOB">DOB</label>
+      <input ngModel type="datetime" class="form-control" id="DOB" name="DOB">
+  </div>
+  <!-- <div class="form-group">
+    <label for="AdharcardNo">AdharcardNo</label>
+    <input ngModel type="number" class="form-control" id="AdharcardNo" name="AdharcardNo"  max="10" >
+</div> -->
+
+
+
+<div class="form-group">
+  <label for="MobileNo">AdharcardNo</label>
+  <input ngModel type="text" class="form-control" required pattern="[0-9]{10}"  maxlength="12"  id="AdharcardNo" name="AdharcardNo" #AdharcardNo="ngModel">
+  <div *ngIf="AdharcardNo.invalid && (AdharcardNo.dirty || AdharcardNo.touched || AdharcardNo.pristine)" class="alert alert-danger">
+    <div *ngIf="AdharcardNo.errors.required">
+        AadharNo is required.
+    </div>
+    <div *ngIf="AdharcardNo.errors.pattern">
+        Allowed 10 digit number only
+    </div>
+</div>  
+</div>
+
+
+  <button type="submit" class="btn btn-primary">Register</button>
+
+  
+</form>
+</div>
+

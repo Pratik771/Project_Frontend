@@ -1,0 +1,42 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form #myForm="ngForm" (ngSubmit)="GenerateLicense(myForm)">
+  <a  routerLink="/home">Go to Home</a>
+  <br>
+  <legend></legend>
+
+ 
+<div class="form-group">
+  <label for="UserId">UserId</label>
+
+  <input   type="number" class="form-control" name="UserId" [(ngModel)]="uid" readonly >
+</div>
+<div class="form-group">
+  <label for="UserId">LicenseId</label>
+
+  <input   type="number" class="form-control" name="LicenseId" [(ngModel)]="lid" readonly >
+</div>
+<div class="form-group">
+  <label for="UserId">AdharcardNo</label>
+
+  <input   type="number" class="form-control" name="AadharcardNo" [(ngModel)]="aid" readonly >
+</div>
+
+
+
+<div class="form-group">
+  <label for="MySchedule">Generated On</label>
+  <input ngModel type="date" class="form-control" id="GeneratedOn" name="GeneratedOn">
+</div>
+
+
+<div class="form-group">
+  <label for="MySchedule">ValidTill</label>
+  <input ngModel type="date" class="form-control" id="ValidTill" name="ValidTill">
+</div>
+
+<button type="submit" class="btn btn-primary">Generate License</button>
+
+  
+</form>
+</div>

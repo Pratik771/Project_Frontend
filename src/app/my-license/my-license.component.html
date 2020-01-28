@@ -1,0 +1,37 @@
+
+<div class="table-responsive">
+  <li><a href="/UserDash">Back</a></li>
+  <table border="1" class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>EmailId</th>
+        <th>LicenseId</th>
+        <th>GeneratedOn</th>
+        <th>ValidTill</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <!-- <td style="background-color: aqua">{{u.UserId}}</td> -->
+        <td>{{name}}</td>
+        <td>{{email}}</td>
+        <td>{{license}}</td>
+        <td> {{gon}}</td>
+        <td >{{vtill}}</td>
+        <!-- <td style="background-color: rgb(165, 157, 49)" >{{ u.MobileNo }}</td> -->
+        <!-- <td style="background-color: aqua">{{ u.ApplicantDetails[0].LicenseId}}</td>
+        <td style="background-color: aqua">{{ u.ApplicantDetails[0].AdharcardNo}}</td>
+        <td style="background-color: aqua">{{ u.ApplicantDetails[0].AdharcardNo}}</td> -->
+    
+
+     <!-- <td *ngIf="u.Appointments[0].Status != 'Sucess'">  
+        <button type="button" class="btn btn-primary" (click)="Result(u.UserId)">Result</button>
+
+        <button type="button" class="btn btn-primary" (click)="GenerateLicense(u.UserId,u.ApplicantDetails[0].LicenseId,u.ApplicantDetails[0].AdharcardNo)">Generate License</button>
+      </td> -->
+      </tr>
+    </tbody>
+  </table>
+</div>

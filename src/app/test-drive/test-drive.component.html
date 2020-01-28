@@ -1,0 +1,31 @@
+<div class="col-md-4"></div>
+<div class="col-md-4">
+<form #myForm="ngForm" (ngSubmit)="AddMyinfo(myForm)">
+  <a  routerLink="/home">Go to Home</a>
+  <br>
+  <legend></legend>
+
+ 
+<div class="form-group">
+  <label for="UserId">UserId</label>
+
+  <input   type="number" class="form-control" name="UserId" [(ngModel)]="id" readonly >
+</div>
+
+
+
+  <div class="form-group">
+      <label for="Gender">Status</label>
+      <br>
+      <input  ngModel type="radio" name="Status" value="Success">Success<br>
+     <input  ngModel type="radio" name="Status" value="Failed">Failed<br>
+      
+  </div>
+
+
+
+  <button type="submit" class="btn btn-primary">Update Applicant Status</button>
+
+  
+</form>
+</div>
